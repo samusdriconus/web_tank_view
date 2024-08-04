@@ -9,10 +9,10 @@
     'author': 'Saidi Oussama',
     'depends': ['stock', 'web'],
     'data': [
-       
+       'views/stock_view.xml',
     ],
     'qweb': [
-        
+
     ],
     'installable': True,
     'application': False,
