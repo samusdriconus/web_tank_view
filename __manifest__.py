@@ -11,9 +11,19 @@
     'data': [
        'views/stock_view.xml',
     ],
-    'qweb': [
-
+    'assets': {
+    'web.assets_backend': [
+        'web_tank_view/static/src/xml/tank_view.xml',
+        'web_tank_view/static/src/tank_view/tank_view_conroller.js',
+        'web_tank_view/static/src/tank_view/tank_view_model.js',
+        'web_tank_view/static/src/tank_view/tank_view_renderer.js',
+        'web_tank_view/static/src/tank_view/tank_view.js',
+        'web_tank_view/static/src/components/TankItem.js',
+        'web_tank_view/static/src/components/TankItem.xml',
     ],
+   
+   
+},
     'installable': True,
     'application': False,
     'auto_install': False,
