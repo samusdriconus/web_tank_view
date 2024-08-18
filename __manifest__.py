@@ -15,6 +15,7 @@
     'web.assets_backend': [
         "web_tank_view/static/src/components/*/*.js",
         "web_tank_view/static/src/components/*/*.xml",
+        "web_tank_view/static/src/components/*/*.css",
      
     ],
    
