@@ -19,4 +19,16 @@
         </field>
     </record>
 
+    <record id="action_web_tank_view" model="ir.actions.client">
+        <field name="name">Show Tanks Locations</field>
+        <field name="tag">web_tank_view.web_tank_view_js</field>        
+    </record>
+
+    <menuitem
+        id="action_tank_view_menu"
+        name="Tanks Location"
+        parent="stock.menu_warehouse_report"
+        action="action_web_tank_view"
+        sequence="200"/>
+
 </odoo>
