@@ -5,7 +5,7 @@
         <div class="tank-container">
             <div class="water-tank" t-foreach="state.tanks" t-as="tank" t-key="tank.id">
                 <div class="liquid">
-                    <svg class="water" t-att-style="'top:cal(100% - ' + state.value  + '%);'" viewBox="0 0 200 100">
+                    <svg class="water" t-att-style="'top:calc(100% - ' + tank.fill_percentage  + '%);'" viewBox="0 0 200 100">
                     <defs>
                         <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0" style="stop-color:#29ABE2"/>
@@ -17,7 +17,7 @@
                         <stop offset="1" style="stop-color:#0000FF"/>
                         </linearGradient>
                     </defs>
-                    <path fill="url(#waterGradient)" d="
+                    <path d="
                         M 0,0 v 100 h 200 v -100 
                         c -10,0 -15,5 -25,5 c -10,0 -15,-5 -25,-5
                         c -10,0 -15,5 -25,5 c -10,0 -15,-5 -25,-5
@@ -31,7 +31,7 @@
                 <div class="indicator" data-value="50"></div> 
                 <div class="indicator" data-value="25"></div> 
                 
-                <div class="label">57%</div> 
+                <div  t-att-style="'bottom:' + tank.fill_percentage + '%;'" class="label"><t t-esc="tank.fill_percentage + '%'"/></div> 
                 <div class="title"><t t-esc="tank.name"/></div>
                 </div> 
         </div>

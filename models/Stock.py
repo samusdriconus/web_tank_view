@@ -21,7 +21,7 @@ class View(models.Model):
     def _compute_percentage(self):
         for record in self:
             if record.capacity > 0:
-                record.fill_percentage = (record.current_quantity / record.capacity) * 100
+                record.fill_percentage = int(record.current_quantity / record.capacity * 100)
             else:
                 record.fill_percentage = 0
 
